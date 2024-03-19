@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 19vh;
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+main {
+    height: 100vh;
+}
+
+footer {
+    position: fixed;
+    height: 19vh;
+    background-color: orange;
+}
+
+body {
+    
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo logo logo . navigatie navigatie navigatie navigatie navigatie navigatie"
+    ". . . . . . . . . .";
+}
+
+.item-logo {
+    grid-area: logo;
+}
+
+.navigation {
+    grid-area: navigatie;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    padding: 1vh 1vw;
+    
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+#alinea {
+    display: flex;
+}
+
+#alinea > article {
+    padding: 10vh 1vw;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+#image {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu table, td {
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.menu table, th {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.menu table, td {
+    font-size: 1.5rem;  
+}
+
+.menu {
+    margin-top: 5vh;
+}
+
+main > h1 {
+    text-align: center;
+    font-family: "Philosopher", sans-serif;
+}
+
+.form {
+    text-align: center;
+    border: 2px solid rgb(105, 200, 255);
+    margin: 0rem 28rem;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+
+    .navigation {
+        height: 12vh;
+        width: 50vw;
+        background-color: rgb(111, 255, 39);
+        border: solid orange 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+    }
+
+    #alinea > article {
+        font-size: 2rem;
+    }
+    
+    .form {
+        text-align: center;
+        margin: 5rem;
+    }
+}
+
+@media screen and (min-width: 767px){
+    #navigatie-toggle {
+        font-size: 4rem;
+    }
+    #navigatie-toggle + label {
+        display: block;
+    }
+    #navigatie-toggle ~ #navigatie-menu {
+        display: none;
+    }
+    #navigatie-toggle:checked ~ #navigatie-menu {
+        display: flex;
+    }
+    #navigatie-menu {
+        position: absolute;
+        flex-direction: column;
+    }
+    #navigatie-menu a {
+        margin: 0.2rem 0;
+    }
+}
+#navigatie-menu {
+    display: flex;
+    background-color: white;
+}
+#navigatie-menu a {
+    margin: 0 0.4rem;
+}
+#navigatie-toggle, #navigatie-toggle + label {
+    display: none;
+}
