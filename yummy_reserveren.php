@@ -28,6 +28,7 @@ include ("header.html");
     
     ?>
     </section>
+    <a href="#">Privacy Policy</a>
 </main>
     <footer></footer>
     <script src="yummy.js"></script>
