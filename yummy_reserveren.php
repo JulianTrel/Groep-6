@@ -28,7 +28,7 @@ include ("header.html");
     
     ?>
     </section>
-    <a href="#">Privacy Policy</a>
+    <a href="avg.php">Privacy Policy</a>
 </main>
     <footer></footer>
     <script src="yummy.js"></script>

@@ -5,6 +5,15 @@
     padding: 0;
 }
 
+body {
+    /* display: grid; */
+    grid-template-rows: auto;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-areas: 
+    "logo logo logo . navigatie navigatie navigatie navigatie navigatie navigatie"
+    ". . . . . . . . . .";
+}
+
 header {
     min-height: 19vh;
     background-color: orange;
@@ -21,15 +30,6 @@ footer {
     position: fixed;
     height: 19vh;
     background-color: orange;
-}
-
-body {
-    
-    grid-template-columns: repeat(10, 10vw);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "logo logo logo . navigatie navigatie navigatie navigatie navigatie navigatie"
-    ". . . . . . . . . .";
 }
 
 .item-logo {
